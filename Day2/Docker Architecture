@@ -1,1 +1,48 @@
+Docker Architecture									
+Docker architecture involves around several key components, each playing a vital role in the containerization process. Let’s break down these components:									
+Docker client – client triggers interactions with the Docker Host.									
+Docker Host – Docker host runs a Docker daemon and a docker registry									
+The Docker Daemon - is a component that runs inside the Docker Host and handles the images and containers.									
+Docker registry - The docker registry stores the docker images. Docker hub is one such registry, but you can have your own too.									
+									
+Docker Workflow									
+The following steps are to follow when different components in the diagram above communicate with each other									
+1.A CLI (client) issues a 'build' command to the Docker Host. The Docker daemon running on Docker Host then builds an image based on the client's inputs through the command. This image then gets saved in the Docker registry. The registry can either be a local repository or a Docker Hub.									
+2. Docker daemon either creates a new image or pulls an existing image from the Docker registry. 									
+3. Finally, Daemon creates an instance of a Docker image. 									
+4. The client then issues a "run" command. It triggers the creation of a container which then executes. The above steps describe a simple workflow of a typical Docker ecosystem.									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+Docker Engine									
+Docker Engine is the heart/ main component of the Docker system. It is open-source and used for containerization with Docker. The docker engine installs on the host. Docker Engine uses client-server technology:									
+It has a daemon process that acts as a server. A Docker daemon is a background process. The daemon process is responsible for managing images, containers, storage volumes, and networks.									
+A Client or a Command Line Interface (CLI).									
+Additionally, it has a Rest API that the CLI client uses and a Docker daemon to communicate and instruct.									
+									
+Docker Image									
+A Docker Image builds containers. We can view a Docker Image as a "source code" of the containers. Images have pre-installed software, they are portable, and we can even use pre-existing images instead of building a brand new one. All this makes deployment more straightforward and faster.									
+Docker images are building blocks of Docker containers and serve as templates for Docker containers in simpler terms.									
+Docker images are created from Docker files, which are text files containing instructions for building the image layer by layer.									
+									
+Docker Container									
+Docker achieves containerization through containers. If we view the Docker Image as a template, then a Docker Container is a copy of that image. So we can have multiple copies of one image, which means various containers.									
+Containers are organizational units in docker. When we say we are running or executing a docker container, we are running an image. Containers draw an analogy from cargo containers.									
+Like cargo containers, we can pack the software, move it, ship it, modify, create, manage, or destroy it.									
+Docker Containers hold the entire package, including application code, dependencies, binaries, etc., to efficiently run an application without any interference.									
+									
+Docker Registry									
+Docker Registry is kind of a repository used to store Docker images. Registries can be public or private. Public registries are called "Docker Hub" and are similar to online code repositories like GitHub. 									
+Organizations can also set up private registries to store proprietary images securely.									
+									
 
